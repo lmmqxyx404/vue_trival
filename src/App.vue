@@ -31,7 +31,7 @@
 <script>
 export default {
   name: 'app',
-  data () {
+  data() {
     return {
       list: [
         {
@@ -47,7 +47,8 @@ export default {
         },
         { id: 3, info: 'Man charged over missing wedding girl.', done: false },
         { id: 4, info: 'Los Angeles battles huge wildfires.', done: false }
-      ]
+      ],
+      msg: 'testword'
     }
   }
 }
