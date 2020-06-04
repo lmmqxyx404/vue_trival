@@ -13,5 +13,5 @@ Vue.use(Antd)
 
 new Vue({
   render: h => h(App),
-  storegit
+  store
 }).$mount('#app')
