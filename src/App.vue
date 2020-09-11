@@ -29,6 +29,7 @@
     <router-link to="/welcome">goto</router-link>
     <router-link to="/">return</router-link>
     <h1><router-link to="/table">table</router-link></h1>
+    <h2><router-link to="/treedata">treedata</router-link></h2>
     <router-view></router-view>
 
   </div>
