@@ -25,6 +25,12 @@
         <a @click="clean">清除已完成</a>
       </div>
     </a-list>
+    <hr>
+    <router-link to="/welcome">goto</router-link>
+    <router-link to="/">return</router-link>
+    <h1><router-link to="/table">table</router-link></h1>
+    <router-view></router-view>
+
   </div>
 </template>
 
@@ -98,4 +104,5 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
+
 </style>

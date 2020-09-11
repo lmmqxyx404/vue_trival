@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-
+import router from './router'
 // 1. 导入 ant-design-vue 组件库
 import Antd from 'ant-design-vue'
 // 2. 导入组件库的样式表
@@ -12,6 +12,7 @@ Vue.config.productionTip = false
 Vue.use(Antd)
 
 new Vue({
+  router,
   render: h => h(App),
   store
 }).$mount('#app')
