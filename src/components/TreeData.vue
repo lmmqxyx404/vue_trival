@@ -5,10 +5,11 @@
       v-model="data"
       show-search
       :tree-data="treedata"
-      :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
       placeholder="Please select"
       allow-clear
-      tree-default-expand-all
+      :dropdown-style="{ maxHeight: '200px', overflow: 'auto' }"
+      :tree-default-expand-all="isExpanded"
+      @select="isSelected"
     ></a-tree-select>
   </div>
 </template>
@@ -18,12 +19,16 @@ export default {
   data() {
     return {
       data: 'Hello Vue',
-      treedata: treedata.treedata
+      treedata: treedata.treedata,
+      isExpanded: false
     }
   },
   methods: {
     show() {
       console.log(this.treedata)
+    },
+    isSelected() {
+      console.log('it is selected')
     }
   },
   mounted() {
