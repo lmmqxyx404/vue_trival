@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import Welcome from './components/HelloWorld.vue'
 import Table from './components/Table.vue'
 import TreeData from './components/TreeData.vue'
+import Select from './components/Select.vue'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -16,6 +17,9 @@ const router = new VueRouter({
   }, {
     path: '/treedata',
     component: TreeData
+  }, {
+    path: '/select',
+    component: Select
   }]
 })
 
