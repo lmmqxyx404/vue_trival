@@ -7,6 +7,7 @@ import TreeData from './components/TreeData.vue'
 import Select from './components/Select.vue'
 import Form from './components/Form.vue'
 import Root from './components/Root.vue'
+import Grid from './components/Grid.vue'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -34,6 +35,9 @@ const router = new VueRouter({
   }, {
     path: '/root',
     component: Root
+  }, {
+    path: '/grid',
+    component: Grid
   }]
 })
 
