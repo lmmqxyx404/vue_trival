@@ -31,7 +31,8 @@
     <h1><router-link to="/table">table</router-link></h1>
     <h2><router-link to="/treedata">treedata</router-link></h2>
     <h2><router-link to="/select">select</router-link></h2>
-    <a-button type="danger" @click="goTo">Form</a-button>
+    <a-button type="danger" @click="goToForm">Form</a-button>
+    <a-button :ghost="true" @click="goToGrid">Grid</a-button>
     <router-view></router-view>
   </div>
 </template>
@@ -82,8 +83,11 @@ export default {
       console.log(key)
       this.$store.commit('changeViewKey', key)
     },
-    goTo() {
+    goToForm() {
       this.$router.push('/form')
+    },
+    goToGrid() {
+      this.$router.push('/grid')
     }
   }
 }
