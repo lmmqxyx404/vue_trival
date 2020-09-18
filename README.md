@@ -1,4 +1,5 @@
-# vuex_demo
+# vuex_demo and ant-design demo
+The demo is based on Vue 2.x.
 
 ## Project setup
 ```
