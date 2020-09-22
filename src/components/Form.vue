@@ -56,8 +56,9 @@
       />
     </a-form-item>
     <a-form-item label="Radio.Group">
-      <a-radio-group v-decorator="['radio-group', { rules: [{ required: true, message: 'Please select your item!' }] },]" >
+      <a-radio-group v-decorator="['radio-group', { rules: [{ required: true, message: 'Please select your item!' }] }]">
         <!-- 获得raido-group组件值的方式 -->
+        <!-- 使用了v-decorator方式获得值的方式后，无法使用属性v-model,value。可以使用defaultValue -->
         <a-radio value="a">item 1</a-radio>
         <a-radio value="b">item 2</a-radio>
         <a-radio value="c">item 3</a-radio>
@@ -74,7 +75,7 @@
 
     <a-form-item label="Checkbox.Group">
       <a-checkbox-group
-        v-decorator="['checkbox-group', { initialValue: ['A', 'B'] }]"
+        v-decorator="['checkbox-group', { initialValue: [value2, 'B'] }]"
         style="width: 100%;"
       >
         <a-row>
@@ -152,6 +153,8 @@
 export default {
   data: () => ({
     listenVal: 'a',
+    value2: 'C',
+    value123: 'b',
     formItemLayout: {
       labelCol: { span: 6 },
       wrapperCol: { span: 14 }
