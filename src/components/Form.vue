@@ -24,7 +24,7 @@
     <a-form-item label="Select[multiple]">
       <a-select
         v-decorator="[
-          'select-multiple',
+          'selectmultiple',
           {
             rules: [
               { required: true, message: 'Please select your favourite colors!', type: 'array' },
@@ -56,7 +56,7 @@
       />
     </a-form-item>
     <a-form-item label="Radio.Group">
-      <a-radio-group v-decorator="['radio-group', { rules: [{ required: true, message: 'Please select your item!' }] }]">
+      <a-radio-group v-decorator="['radiogroup', { rules: [{ required: true, message: 'Please select your item!' }] }]">
         <!-- 获得raido-group组件值的方式 -->
         <!-- 使用了v-decorator方式获得值的方式后，无法使用属性v-model,value。可以使用defaultValue -->
         <a-radio value="a">item 1</a-radio>
@@ -73,9 +73,10 @@
       </a-radio-group>
     </a-form-item>
 
+  <!-- { initialValue: [value2, 'B'] } -->
     <a-form-item label="Checkbox.Group">
       <a-checkbox-group
-        v-decorator="['checkbox-group', { initialValue: [value2, 'B'] }]"
+        v-decorator="['checkbox-group']"
         style="width: 100%;"
       >
         <a-row>
@@ -180,13 +181,20 @@ export default {
       return e && e.fileList
     },
     collectValue() {
-      const val = this.form.getFieldValue('radio-group')
+      const val = this.form.getFieldValue('radiogroup')
       console.log(val)
       console.log('collect value')
     },
     listenChange(e) {
       console.log(e)
     }
+  },
+  created() {
+    console.log('created')
+    console.log(this.form)
+    this.form.setFieldsValue({ radiogroup: 'd' })
+    this.form.setFieldsValue({ selectmultiple: ['red', 'green'] })
+    this.form = this.$form.createForm(this, { name: 'validate_other' })
   }
 }
 </script>
