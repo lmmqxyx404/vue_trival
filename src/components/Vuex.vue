@@ -33,6 +33,7 @@
     <h2><router-link to="/select">select</router-link></h2>
     <a-button type="danger" @click="goToForm">Form</a-button>
     <a-button :ghost="true" @click="goToGrid">Grid</a-button>
+    <a-button :ghost="true" @click="goToModal">Modal</a-button>
     <router-view></router-view>
   </div>
 </template>
@@ -88,6 +89,9 @@ export default {
     },
     goToGrid() {
       this.$router.push('/grid')
+    },
+    goToModal() {
+      this.$router.push('/modal')
     }
   }
 }
