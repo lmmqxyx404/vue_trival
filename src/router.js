@@ -8,6 +8,7 @@ import Select from './components/Select.vue'
 import Form from './components/Form.vue'
 import Root from './components/Root.vue'
 import Grid from './components/Grid.vue'
+import Modal from './components/Modal.vue'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -38,6 +39,9 @@ const router = new VueRouter({
   }, {
     path: '/grid',
     component: Grid
+  }, {
+    path: '/modal',
+    component: Modal
   }]
 })
 
