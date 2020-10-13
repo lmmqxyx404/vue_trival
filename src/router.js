@@ -9,6 +9,7 @@ import Form from './components/Form.vue'
 import Root from './components/Root.vue'
 import Grid from './components/Grid.vue'
 import Modal from './components/Modal.vue'
+import TableComplex from './components/TableComplex.vue'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -42,6 +43,9 @@ const router = new VueRouter({
   }, {
     path: '/modal',
     component: Modal
+  }, {
+    path: '/tablecomplex',
+    component: TableComplex
   }]
 })
 
