@@ -34,6 +34,7 @@
     <a-button type="danger" @click="goToForm">Form</a-button>
     <a-button :ghost="true" @click="goToGrid">Grid</a-button>
     <a-button :ghost="true" @click="goToModal">Modal</a-button>
+    <a-button  @click="goToTableComplex" type="primary">TableComplex</a-button>
     <router-view></router-view>
   </div>
 </template>
@@ -92,6 +93,9 @@ export default {
     },
     goToModal() {
       this.$router.push('/modal')
+    },
+    goToTableComplex() {
+      this.$router.push('/tablecomplex')
     }
   }
 }
